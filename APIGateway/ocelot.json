@@ -9,8 +9,20 @@
           "Port": "5001"
         }
       ],
-      "UpstreamPathTemplate": "/api-microservice/products",
+      "UpstreamPathTemplate": "/api/products",
       "Key": "Products"
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/orders",
+      "Key": "Orders"
     }
   ],
   "GlobalConfiguration": {
