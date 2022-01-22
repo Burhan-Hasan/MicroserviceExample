@@ -32,6 +32,16 @@ namespace APIGateway
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.Use(async (context, next) =>
+            {
+                if (string.IsNullOrEmpty(context.Request.Path.Value.Trim('/')))
+                {
+                    context.Request.Path = "/index.html";
+                }
+                await next();
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
         }
