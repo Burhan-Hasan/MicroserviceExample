@@ -1,3 +1,3 @@
-#Microservice example on .NET 6 platform
+# Microservice example on .NET 6 platform
 
-##Using Ocelot for API Gateway
+## Using Ocelot for API Gateway
