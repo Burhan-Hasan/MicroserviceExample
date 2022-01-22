@@ -10,7 +10,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/products",
-      "Key": "Products"
+      "Key": "Products",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "auth_microservices"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/orders",
@@ -22,7 +25,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/orders",
-      "Key": "Orders"
+      "Key": "Orders",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "auth_microservices"
+      }
     }
   ],
   "GlobalConfiguration": {
