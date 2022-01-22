@@ -1,1 +1,3 @@
-# MicroserviceExample_ASP.NET_CORE_3.1
+#Microservice example on .NET 6 platform
+
+##Using Ocelot for API Gateway
