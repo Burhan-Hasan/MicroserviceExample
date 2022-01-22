@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{359D0092-6303-45E3-B0CD-C159661F4B09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway", "APIGateway\APIGateway.csproj", "{359D0092-6303-45E3-B0CD-C159661F4B09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{DEB4C932-5C23-40FA-BB7D-09E845263467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsService", "ProductsService\ProductsService.csproj", "{D84B1799-588F-4CA6-BF7F-CDFFB8578F39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1F58F3F7-5AAD-483C-8394-FBA6DEA64D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{CD18A704-D984-4B56-BF83-3A60365E3EBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,21 @@ Global
 		{359D0092-6303-45E3-B0CD-C159661F4B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{359D0092-6303-45E3-B0CD-C159661F4B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{359D0092-6303-45E3-B0CD-C159661F4B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D84B1799-588F-4CA6-BF7F-CDFFB8578F39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84B1799-588F-4CA6-BF7F-CDFFB8578F39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84B1799-588F-4CA6-BF7F-CDFFB8578F39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84B1799-588F-4CA6-BF7F-CDFFB8578F39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD18A704-D984-4B56-BF83-3A60365E3EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD18A704-D984-4B56-BF83-3A60365E3EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD18A704-D984-4B56-BF83-3A60365E3EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD18A704-D984-4B56-BF83-3A60365E3EBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D84B1799-588F-4CA6-BF7F-CDFFB8578F39} = {DEB4C932-5C23-40FA-BB7D-09E845263467}
+		{CD18A704-D984-4B56-BF83-3A60365E3EBC} = {1F58F3F7-5AAD-483C-8394-FBA6DEA64D88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7D2595DF-0D6A-4D8A-A753-2D4E93DCE9E0}
