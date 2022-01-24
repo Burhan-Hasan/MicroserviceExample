@@ -1,3 +1,4 @@
+using IdentityModel.Client;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,28 +29,30 @@ namespace APIGateway
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot(Configuration);
+            services.AddHttpClient();
+            services.AddControllersWithViews();
+            //services.AddOcelot(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public async void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            app.Use(async (context, next) =>
-            {
-                if (string.IsNullOrEmpty(context.Request.Path.Value.Trim('/')))
-                {
-                    context.Request.Path = "/index.html";
-                }
-                await next();
-            });
-            app.UseAuthentication();
-            await app.UseOcelot();
+            //app.Use(async (context, next) =>
+            //{
+            //    if (string.IsNullOrEmpty(context.Request.Path.Value.Trim('/')))
+            //    {
+            //        context.Request.Path = "/index.html";
+            //    }
+            //    await next();
+            //});
+            //await app.UseOcelot();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapDefaultControllerRoute();
+            });
         }
     }
 }

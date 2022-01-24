@@ -15,16 +15,23 @@ namespace IdentityServer
                     ClientId =  "client_id",
                     ClientSecrets ={ new Secret("client_secrets".ToSha256())},
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = { 
-                        "ORDERS_API"
+                    
+                    AllowedScopes = {
+                        "OrdersApi"
                     }
                 }
+            };
+
+        public static IEnumerable<ApiScope> GetApiScopes() =>
+            new List<ApiScope>()
+            {
+                new ApiScope("OrdersApi")
             };
 
         public static IEnumerable<ApiResource> GetApiResources() =>
             new List<ApiResource>()
             {
-                new ApiResource("ORDERS_API")
+                new ApiResource("OrdersApi")
             };
 
 
