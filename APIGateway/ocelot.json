@@ -10,10 +10,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/products",
-      "Key": "Products",
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "auth_microservices"
-      }
+      "Key": "Products"
+      //,"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "auth_microservices"
+      //}
     },
     {
       "DownstreamPathTemplate": "/api/orders",
@@ -25,10 +25,10 @@
         }
       ],
       "UpstreamPathTemplate": "/api/orders",
-      "Key": "Orders",
-      "AuthenticationOptions": {
-        "AuthenticationProviderKey": "auth_microservices"
-      }
+      "Key": "Orders"
+      //,"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "auth_microservices"
+      //}
     }
   ],
   "GlobalConfiguration": {
